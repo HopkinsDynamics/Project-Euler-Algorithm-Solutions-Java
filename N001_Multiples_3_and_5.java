@@ -6,10 +6,10 @@ public class N001_Multiples_3_and_5 {
     N001_Multiples_3_and_5(){
 
         // Big -O(n) implementation
-
+        System.out.println("Sum of all the multiples of 3 and 5 below 1000: ");
     }
     public void versionOne(){ //Linear implementation
-        System.out.println("Sum of all the multiples of 3 and 5 below 1000: ");
+
         int sum = 0;
         int iterations=0;
         for(int i=1; i < 1000; i++){
@@ -49,7 +49,7 @@ public class N001_Multiples_3_and_5 {
             }
         }
 
-        System.out.println("count: "+count);
+        System.out.println("iterations: "+count);
         System.out.println(multSums);
     }
 }

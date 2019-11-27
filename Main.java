@@ -7,6 +7,8 @@ public class Main {
      N001_Multiples_3_and_5 n001 = new N001_Multiples_3_and_5();
      n001.versionOne();
      n001.versionTwo();
+     N002_Even_Fibonacci n002= new N002_Even_Fibonacci();
+     n002.evenFibonacci();
 
 
     }
