@@ -24,47 +24,35 @@ public class N003_Largest_Prime_Factor {
     //about half the iterations used by the alternative method
     public long largestPrimeFactor(long number){
         long max = -1;
-        //long iterations=0;
-
         //reduce using 2's
         while(number%2==0){
-            //iterations++;
             max = 2;
             number/=2;
-
         }
 
         // go only up to square root of number because factors then alternate ex. 5*4 -> 4*5
         for(long i =3; i < (long)Math.sqrt(number); i+=2){ // increment by odd numbers
-
             while(number%i==0){ //reduce by odd number until eliminated
                 max=i;
                 number/=i;
-                //iterations++;
             }
-           // iterations++;
         }
         if(number>2){ //switch  if greater than 2
             max = number;
         }
-        //System.out.println("iterations: "+iterations);
         return max;
-
     }
 
     //simpler alternative method
     long alternative(long number){
-        //long iterations=0;
         long f = 2;
         while (f*f <= number){
-            //iterations++;
             if(number%f==0){
                 number/=f;
             }else{
                 f++;
             }
         }
-       // System.out.println("iterations: "+iterations);
         return number;
     }
 
